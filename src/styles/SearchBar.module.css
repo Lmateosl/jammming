@@ -1,0 +1,32 @@
+.div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    height: 100px;
+}
+
+.input {
+    margin-right: 10px;
+    border-radius: 10px;
+    height: 40px;
+    background-color: #e2cef6;
+    border: none;
+    padding: 5px;
+    padding-left: 12px;
+    color: #5b0672;
+}
+
+.input::placeholder {
+    color: #b4a4c4;
+}
+
+.button {
+    border-radius: 10px;
+    height: 40px;
+    background-color: #e2cef6;
+    border: none;
+    padding: 0px 5px;
+    color: #5b0672;
+}

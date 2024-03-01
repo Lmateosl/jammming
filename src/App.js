@@ -1,24 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useState } from 'react';
+import Bar from './components/Bar';
+import SearchBar from './components/SearchBar';
+import { get } from './HttpRequests';
 
 function App() {
+
+  const [tracks, setTracks] = useState(null);
+  const [searchInput, setSearchInput] = useState("");
+
+  const searchChangeHandler = ({target}) => setSearchInput(target.value);
+
+  const submitHandler = async() => {
+    const response = await get(searchInput);
+    console.log(response);
+    setTracks(response);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div id="contenedorApp">
+        <div id="componentes">
+          <Bar />
+          <SearchBar onChangeSearch={searchChangeHandler} onClickButon={submitHandler}/>
+        </div>
+      </div>
   );
 }
 
