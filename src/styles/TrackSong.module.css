@@ -1,0 +1,20 @@
+.divContainer {
+    width: 90%;
+    padding: 10px 10px 2px 10px;
+    display: flex;
+    align-items: center;
+    color: #5b0672;
+    border-bottom: 1px solid #5b0672;
+    margin: 0 auto;
+}
+
+.divSong {
+    width: 100%;
+}
+
+.divAdd {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    user-select: none;
+}

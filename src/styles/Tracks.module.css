@@ -1,0 +1,11 @@
+.divContainer {
+    color: #5b0672;
+    width: 100%;
+    height: 60vh;
+    padding: 5px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgba(226,206,246, 0.7);
+    align-items: center;
+    overflow-y: scroll;
+}
