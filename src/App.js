@@ -10,6 +10,7 @@ function App() {
   const [tracks, setTracks] = useState(null);
   const [addList, setAddList] = useState([]);
   const [searchInput, setSearchInput] = useState("");
+  const [nameList, setNameList] = useState("");
 
   const searchChangeHandler = ({target}) => setSearchInput(target.value);
 
@@ -24,8 +25,13 @@ function App() {
       ...prevAddList,
       tracks[trackIndex]
     ]));
-    console.log(addList);
   }
+
+  const removeClickHandler = (trackIndex) => {
+    setAddList(prevAddList => prevAddList.filter((list, i) => i !== trackIndex));
+  }
+
+  const changeNameListHandler = ({target}) => setNameList(target.value);
 
   return (
       <div id="contenedorApp">
@@ -33,10 +39,8 @@ function App() {
           <Bar />
           <SearchBar onChangeSearch={searchChangeHandler} onClickButon={submitHandler}/>
           <div id="lists">
-            <Tracks tracks={tracks} onAddClick={addClickHandlrer}/>
-            <div>
-
-            </div>
+            <Tracks tracks={tracks} onAddClick={addClickHandlrer} isResults={true}/>
+            <Tracks tracks={addList} onAddClick={removeClickHandler} isResults={false} onPlaylistChange={changeNameListHandler}/>
           </div>
         </div>
       </div>

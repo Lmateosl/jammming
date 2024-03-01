@@ -38,6 +38,6 @@ body {
   width: 80%;
   margin: 0 auto;
   padding: 10px;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
