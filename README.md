@@ -1,3 +1,16 @@
+# Jammming 
+Jammming is a simple react app, which conects to spotify to create a playlist with songs of your election.
+
+# Technologies
++ React
++ Fetch
+
+# Steps
++    git clone the project
++    npm install
++    npm start 
++    In HttpRequests.js add your userId and your clientSecret from Spotify dashboard
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -1,6 +1,6 @@
-let clientId = '2d0112d6329048f1b93f006a4909ac1d';
+let clientId = '';
 let tokenAcces;
-const clientSecret = '69a6a6a11313431b9ae6e4ec8b6e4c90';
+const clientSecret = '';
 const redirectUri = 'http://localhost:3000/';
 
 export async function get(song) {
