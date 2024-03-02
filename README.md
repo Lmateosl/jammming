@@ -6,10 +6,10 @@ Jammming is a simple react app, which conects to spotify to create a playlist wi
 + Fetch
 
 # Steps
-+    git clone the project
-+    npm install
-+    npm start 
-+    In HttpRequests.js add your userId and your clientSecret from Spotify dashboard
+1.    git clone the project
+2.    npm install
+3.    In HttpRequests.js add your userId and your clientSecret from Spotify dashboard    
+4.    npm start 
 
 # Getting Started with Create React App
 
