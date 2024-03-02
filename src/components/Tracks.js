@@ -3,7 +3,7 @@ import styles from '../styles/Tracks.module.css';
 import TrackSong from './TrackSong';
 import InputPlaylist from './InputPlaylist';  
 
-export default function Tracks({tracks, onAddClick, isResults, onPlaylistChange="nada"}) {
+export default function Tracks({tracks, onAddClick, isResults, onPlaylistChange="nada", onPlaylistSubmit="nada"}) {
     return(
         <div className={styles.divContainer}>
             {
@@ -30,7 +30,7 @@ export default function Tracks({tracks, onAddClick, isResults, onPlaylistChange=
                 <h3 style={{textAlign: 'center'}}>Search a song</h3>
             }
             {
-                !isResults && <div></div>
+                !isResults && <button className={styles.button} onClick={onPlaylistSubmit}>Subir a Spotify</button>
             }
         </div>
     );

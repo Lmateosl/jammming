@@ -9,3 +9,14 @@
     align-items: center;
     overflow-y: auto;
 }
+
+.button {
+    margin: 10px auto;
+    border-radius: 10px;
+    height: 40px;
+    background-color: #e2cef6;
+    border: none;
+    padding: 7px;
+    color: #5b0672;
+    display: block;
+}
